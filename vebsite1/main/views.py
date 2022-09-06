@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 
 def index(reqeust):
-    return HttpResponse('<h4>Hallo</h4>')
+    return render(reqeust, 'index.html')
 
 
-def detail(reqeust):
-    return render(reqeust, 'detail.html')
+def about(reqeust):
+    return render(reqeust, 'about.html')
