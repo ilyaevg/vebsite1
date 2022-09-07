@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Task
 
 
-def index(reqeust):
-    return render(reqeust, 'index.html')
+def index(request):
+    task = Task.objects.all()
+    return render(request, 'main/index.html', {'title': 'Главная страница', 'tasks': task})
 
 
-def about(reqeust):
-    return render(reqeust, 'about.html')
+def about(request):
+    return render(request, 'main/about.html')
