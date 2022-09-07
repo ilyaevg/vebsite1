@@ -15,3 +15,4 @@ class Migration(migrations.Migration):
             options={'verbose_name': 'Задача', 'verbose_name_plural': 'Задачи'},
         ),
     ]
+
